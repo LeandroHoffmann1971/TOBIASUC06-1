@@ -1,0 +1,33 @@
+# US-01 · Cadastro e controle de novas mercadoria em estoque
+
+**ID:** US-01  
+**Título:** Cadastro de nova mercadoria  
+**Como** proprietário do bar (persona: Carlos), **quero** cadastrar – podendo, posteriormente, registrar alterações de entrada e saída – mercadorias no estoque. O cadastro deve ter os campos: id, descrição mercadoria, unidade de medida, entrada, saída, saldo, data registro, **para que** eu possa ter um melhor controle do meu estoque.  
+
+* **Prioridade:** MUST (MoSCoW)  
+* **Estimativa:** 2 pontos (story points)  
+* **Depende de:** — (entrada de dados autônoma)  
+
+### Critérios de aceitação:
+* **AC1.** Campos obrigatórios: descrição mercadoria (>= 3 chars e <=250 chars); unidade de medida (de 1 a 10 caracteres, negado o cadastro de valores vazios ou nulos). O campo id deve ter entrada automática (auto numeração). O campo saldo não deve ter entrada, sendo o resultado do cálculo de entradas menos saídas. O campo data deve ter entrada automática (data atual)  
+* **AC2.** Os campos entrada e saída devem aceitar apenas valores positivos e o campo.   
+* **AC3.** O campo saldo deve aceitar valores positivos e negativos.  
+* **AC4.** Após salvar, mercadoria aparece na lista em <1s.  
+* **AC5.** Cancelar descarta dados sem persistência parcial.  
+* **AC6.** Erro de rede exibe mensagem amigável e mantém dados.  
+
+---
+
+* **MOSCOW (Priorização):** MUST / SHOULD / COULD / WONT  
+* **INVEST (Critérios de qualidade):** INDEPENDENT, NEGOTIABLE, VALUABLE, ESTIMABLE, SMALL, TESTABLE  
+* **3 C’s (components user story):** CARD – CONVERSATION – CONFIRMATION  
+
+* **CONTRATO:** 6 ACs testáveis tudo passa = pronto  
+
+---
+
+### Mapeamento de Elementos (Notas Visuais)
+
+* **PAPEL:** Proprietário Carlos do Bar / Proprietária Mariana — do salão  
+* **VALOR:** Registro e Controle de Mercadorias em estoque (id, descrição mercadoria, unidade de medida, entrada, saída, saldo, data registro)  
+* **AÇÃO:** Cadastro de Mercadoria no Estoque (id, descrição mercadoria, unidade de medida, entrada, saída, saldo, data registro)  
